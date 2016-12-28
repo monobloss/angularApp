@@ -1,0 +1,43 @@
+[{
+	"name": "Thor",
+	"power": "God",
+	"origin": "Asgard",
+	"wealth": 100000,
+	"selected": true,
+	"thumb": "content/img/thor.png"
+}, {
+	"name": "Spider-Man",
+	"power": "Spider mutation",
+	"origin": "New York",
+	"wealth": 50,
+	"selected": true,
+	"thumb": "content/img/spiderman.png"
+}, {
+	"name": "Iron Man",
+	"power": "Intelligence",
+	"origin": "New York",
+	"wealth": 999999999,
+	"selected": true,
+	"thumb": "content/img/ironman.png"
+}, {
+	"name": "Wolverine",
+	"power": "Self-Healing",
+	"origin": "Canada",
+	"wealth": 100,
+	"selected": true,
+	"thumb": "content/img/wolverine.png"
+}, {
+	"name": "Dr.Strange",
+	"power": "Magic",
+	"origin": "USA",
+	"wealth": 100000,
+	"selected": true,
+	"thumb": "content/img/strange.png"
+}, {
+	"name": "Hulk",
+	"power": "Smashing",
+	"origin": "USA",
+	"wealth": 0,
+	"selected": true,
+	"thumb": "content/img/hulk.png"
+}]

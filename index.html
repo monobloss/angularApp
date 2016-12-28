@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myMarvelHeroesApp">
+<head>
+    <base href="/" />
+<title>Marvel Heroes - Facts</title> 
+    <link href="content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/angular-route.min.js"></script>
+    <script src="app/lib/angular-animate.min.js"></script>
+     <script src="app/app.js"></script>
+</head>
+    <body>
+        <header id="menu-bar">
+            <nav class="main-navigation">
+            <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/heroesapp">Heroes List</a></li> 
+            </ul>
+            </nav>
+        
+        </header>
+<main ng-view></main>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+        <div class="content">
+
+    <button data-ng-click="order = 'name'">Order by Name</button>
+     <button data-ng-click="order = 'wealth'">Order by Wealth</button>
+            
+    <input type="text" placeholder="search for hero" data-ng-model="search" />
+     <button id="details-button" ng-click="activeButton()" type="button">Show all details</button>                   
+
+       <ul id="heroes-list"> 
+           <li data-ng-repeat="hero in heroes | orderBy: order | filter: search" data-ng-show="hero.selected">
+               <img data-ng-src="{{hero.thumb}}" data-ng-show="hero.thumb" />
+               <h3>{{hero.name}}</h3> 
+                              <div class="remove" ng-click="removeHero(hero)">x</div>
+               <span>{{hero.wealth | currency}}</span>  
+               <div class="details" ng-class="{'active': isActive}">
+               <ul>
+                   <li>
+                       <em>Power: {{hero.power}}</em>
+                   </li>
+                                      <li>
+                  <em>Origin: {{hero.origin}}</em>
+                   </li>
+                </ul>
+               </div>
+           </li>
+        </ul>
+
+    <form name="addhero" data-ng-submit="addHero()">
+    <input type="text" placeholder="name" name="name" data-ng-model="newhero.name" required />
+        <div data-ng-show="addhero.name.$touched  && addhero.name.$invalid">
+        <small style="color: red; display: block; text-align: center;">Enter name</small>
+        </div>
+                <div data-ng-show="addhero.name.$touched  && addhero.name.$valid">
+        <small style="color: green; display: block; text-align: center;">Good to go ! :)</small>
+        </div>
+    <input type="text" placeholder="power" name="power" data-ng-model="newhero.power"  required/>
+                <div data-ng-show="addhero.power.$touched  && addhero.power.$invalid">
+        <small style="color: red; display: block; text-align: center;">Enter power</small>
+        </div>
+                        <div data-ng-show="addhero.power.$touched  && addhero.power.$valid">
+        <small style="color: green; display: block; text-align: center;">Good to go ! :)</small>
+        </div>
+    <input type="text" placeholder="origin" name="origin"  data-ng-model="newhero.origin"  required/>
+                <div data-ng-show="addhero.origin.$touched  && addhero.origin.$invalid">
+        <small style="color: red; display: block; text-align: center;">Enter origin</small>
+        </div>
+                <div data-ng-show="addhero.origin.$touched  && addhero.origin.$valid">
+        <small style="color: green; display: block; text-align: center;">Good to go ! :)</small>
+        </div>
+    <input type="number" placeholder="wealth" name="wealth" data-ng-model="newhero.wealth"  required/>
+                <div data-ng-show="addhero.wealth.$touched  && addhero.wealth.$invalid">
+        <small style="color: red; display: block; text-align: center;">Enter wealth in numbers</small>
+        </div>
+                <div data-ng-show="addhero.wealth.$touched  && addhero.wealth.$valid">
+        <small style="color: green; display: block; text-align: center;">Good to go ! :)</small>
+        </div>
+        <input type="submit" value="Add new hero" />
+     </form>
+        
+            </div>
