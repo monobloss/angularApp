@@ -39,6 +39,7 @@ myMarvelHeroesApp.controller('HeroesController', ['$scope', '$http', function($s
          $scope.newhero.power = "";
          $scope.newhero.origin = "";
       $scope.newhero.wealth = "";
+     $scope.addhero.$setUntouched();
  }
   $http.get('app/lib/data.json').then(function(response){
   
