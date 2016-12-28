@@ -1,7 +1,6 @@
 var myMarvelHeroesApp = angular.module('myMarvelHeroesApp', ['ngRoute', 'ngAnimate']);
 
-myMarvelHeroesApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
+myMarvelHeroesApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
 
 .when('/home', {templateUrl: "views/home.html"})
