@@ -4,13 +4,13 @@
      <button data-ng-click="order = 'wealth'">Order by Wealth</button>
             
     <input type="text" placeholder="search for hero" data-ng-model="search" />
-     <button id="details-button" ng-click="activeButton()" type="button">Show all details</button>                   
+     <button id="details-button" data-ng-click="activeButton()" type="button">Show all details</button>                   
 
        <ul id="heroes-list"> 
            <li data-ng-repeat="hero in heroes | orderBy: order | filter: search" data-ng-show="hero.selected">
-               <img data-ng-src="{{hero.thumb}}" data-ng-show="hero.thumb" />
+               <img data-ng-src="{{hero.thumb}}" data-ng-show="hero.thumb" alt="" />
                <h3>{{hero.name}}</h3> 
-                              <div class="remove" ng-click="removeHero(hero)">x</div>
+                              <div class="remove" data-ng-click="removeHero(hero)">x</div>
                <span>{{hero.wealth | currency}}</span>  
                <div class="details" ng-class="{'active': isActive}">
                <ul>
