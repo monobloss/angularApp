@@ -12,7 +12,7 @@
                <h3>{{hero.name}}</h3> 
                               <div class="remove" data-ng-click="removeHero(hero)">x</div>
                <span>{{hero.wealth | currency}}</span>  
-               <div class="details" ng-class="{'active': isActive}">
+               <div class="details" data-ng-class="{'active': isActive}">
                <ul>
                    <li>
                        <em>Power: {{hero.power}}</em>
